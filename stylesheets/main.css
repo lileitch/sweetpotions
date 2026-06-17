@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif+Caption:ital@0;1&display=swap');
+
+/* ----- Base ----- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Arial, cursive, sans-serif;
+  line-height: 1.5;
+  color: #1f2933;
+  background-color: #0b1020;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle at top, #1a2540 0, #050814 55%, #020308 100%);
+  color: #e5e7eb;
+}
+
+/* ----- Layout wrappers ----- */
+
+body > header,
+body > main,
+body > footer {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ----- Header & Navigation ----- */
+
+header .brand {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* name left, logo right */
+  gap: 1rem;
+}
+
+header .brand-logo img {
+  max-height: 48px; /* adjust as needed */
+  height: auto;
+}
+
+header {
+  padding: 1.5rem 0 1rem;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.4);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fbbf24; /* warm golden */
+  text-shadow: 0 0 10px rgba(251, 191, 36, 0.5);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.25rem;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+nav a {
+  text-decoration: none;
+  color: #e5e7eb;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.45rem 0.75rem;
+  /* border-radius: 999px; */
+  border-top-left-radius: 6px;
+  border: 1px solid transparent;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: rgba(59, 130, 246, 0.2);
+  border-color: rgba(96, 165, 250, 0.7);
+  color: #f9fafb;
+  outline: none;
+}
+
+/* ----- Main Sections ----- */
+
+main {
+  padding: 2rem 0 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+section#intro {
+  margin-top: 2rem;
+  text-align: left;
+}
+
+section h2 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 1.6rem;
+  color: #fbbf24;
+  text-shadow: 0 0 8px rgba(251, 191, 36, 0.4);
+}
+
+section p {
+  margin: 0.5rem 0;
+  max-width: 70ch;
+}
+
+/* ----- Intro ----- */
+
+#intro {
+  background: linear-gradient(
+    145deg,
+    rgba(15, 23, 42, 0.95),
+    rgba(30, 64, 175, 0.65)
+  );
+  border-radius: 1rem;
+  padding: 1.75rem 1.5rem 1.9rem;
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  box-shadow:
+    0 20px 40px rgba(15, 23, 42, 0.9),
+    0 0 0 1px rgba(15, 23, 42, 0.9);
+}
+
+/* ----- Potion Catalog ----- */
+
+#catalog {
+  padding: 0.5rem 0;
+}
+
+#catalog > h2 {
+  margin-bottom: 1.25rem;
+}
+
+.potion-catalog {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.potion-card {
+  background: radial-gradient(circle at top, #111827 0, #020617 70%);
+  border-radius: 0.9rem;
+  padding: 1rem 1rem 1.1rem;
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.8);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.potion-card header h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  color: #bfdbfe; /* soft sky */
+}
+
+.potion-card figure {
+  margin: 0.25rem 0 0.6rem;
+}
+
+.potion-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0.6rem;
+  border: 1px solid rgba(55, 65, 81, 0.9);
+}
+
+.potion-card p {
+  font-size: 0.95rem;
+  margin: 0.25rem 0;
+}
+
+.potion-card p strong {
+  color: #fbbf24;
+}
+
+/* ----- Contact Section ----- */
+
+#contact {
+  background: rgba(15, 23, 42, 0.9);
+  border-radius: 1rem;
+  padding: 1.5rem 1.5rem 1.75rem;
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  box-shadow: 0 16px 32px rgba(15, 23, 42, 0.9);
+}
+
+#contact a {
+  color: #93c5fd;
+}
+
+#contact a:hover,
+#contact a:focus {
+  color: #bfdbfe;
+}
+
+/* ----- Footer ----- */
+
+footer {
+  border-top: 1px solid rgba(148, 163, 184, 0.4);
+  padding: 1.5rem 1.5rem 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #9ca3af;
+}
+
+footer p {
+  margin: 0.25rem 0;
+}
+
+footer a {
+  color: #93c5fd;
+  text-decoration: none;
+}
+
+footer a:hover,
+footer a:focus {
+  text-decoration: underline;
+}
+
+/* ----- Responsiveness ----- */
+
+@media (max-width: 600px) {
+  header {
+    align-items: flex-start;
+  }
+
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  main {
+    gap: 2.5rem;
+  }
+}
